@@ -17,6 +17,6 @@ public class UserLogin {
     @NotBlank(message = "Email must not be empty")
     private String email;
 
-    @Size( min = 6, max =  16 , message = "password has atLeast 6 characters and atMax 16 characters")
-    private  String password;
+    @Size(min = 6, message = "password has at least 6 characters")
+    private String password;
 }
