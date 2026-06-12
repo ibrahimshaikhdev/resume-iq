@@ -1,0 +1,208 @@
+.wrapper {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #1e1b4b, #312e81);
+    padding: 14px 20px;
+}
+
+.sectionTitle {
+    color: #ffffff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 12px;
+}
+
+.sectionTitle i {
+    color: #a78bfa;
+}
+
+.summary {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.summaryItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.summaryNum {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.summaryLabel {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.summaryDivider {
+    width: 1px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.coverageBar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.coverageFill {
+    height: 100%;
+    background: linear-gradient(90deg, #7c3aed, #ec4899);
+    transition: width 1s ease;
+}
+
+.grid {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 12px;
+}
+
+.categoryCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    padding: 14px;
+    transition: border-color 0.2s;
+}
+
+.categoryCard:hover {
+    border-color: rgba(124, 58, 237, 0.3);
+}
+
+.categoryHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.categoryName {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #e5e7eb;
+}
+
+.categoryName i {
+    color: #a78bfa;
+    font-size: 12px;
+    width: 16px;
+    text-align: center;
+}
+
+.statusBadge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 12px;
+}
+
+.statusBadge.strong {
+    background: rgba(16, 185, 129, 0.15);
+    color: #6ee7b7;
+}
+
+.statusBadge.moderate {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fcd34d;
+}
+
+.statusBadge.weak {
+    background: rgba(239, 68, 68, 0.15);
+    color: #fca5a5;
+}
+
+.statusBadge.critical {
+    background: rgba(220, 38, 38, 0.2);
+    color: #f87171;
+}
+
+.skillCells {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.cellMatched {
+    background: rgba(16, 185, 129, 0.1);
+    color: #6ee7b7;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.cellMissing {
+    background: rgba(239, 68, 68, 0.08);
+    color: #fca5a5;
+    border: 1px dashed rgba(239, 68, 68, 0.25);
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.miniBar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.miniFill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.8s ease;
+}
+
+.fill_strong {
+    background: linear-gradient(90deg, #059669, #10b981);
+}
+
+.fill_moderate {
+    background: linear-gradient(90deg, #d97706, #f59e0b);
+}
+
+.fill_weak {
+    background: linear-gradient(90deg, #dc2626, #ef4444);
+}
+
+.fill_critical {
+    background: linear-gradient(90deg, #b91c1c, #dc2626);
+}
+
+/* Responsive */
+@media screen and (max-width: 640px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .summary {
+        gap: 12px;
+    }
+
+    .summaryNum {
+        font-size: 16px;
+    }
+}

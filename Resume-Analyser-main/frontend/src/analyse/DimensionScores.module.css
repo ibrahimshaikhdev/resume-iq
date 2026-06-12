@@ -1,0 +1,134 @@
+.container {
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 28px;
+    backdrop-filter: blur(10px);
+}
+
+.title {
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 0 0 24px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.dimensionCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 18px;
+    transition: all 0.2s ease;
+}
+
+.dimensionCard:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.iconWrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.headerInfo {
+    flex: 1;
+}
+
+.headerInfo h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #e5e7eb;
+}
+
+.scoreLabel {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.scoreCircle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 3px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.progressContainer {
+    margin-bottom: 12px;
+}
+
+.progressBar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 1s ease;
+}
+
+.explanation {
+    margin: 0;
+    font-size: 13px;
+    color: #9ca3af;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.explanation i {
+    color: #fbbf24;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 20px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

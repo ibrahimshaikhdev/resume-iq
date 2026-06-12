@@ -1,0 +1,2575 @@
+2026-06-11 17:18:37.507 [background-preinit] [] [] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-06-11 17:18:37.579 [main] [] [] INFO  c.a.R.a.ResumeAnalyserApplication - Starting ResumeAnalyserApplication using Java 17.0.15 with PID 16496 (F:\Download\Resume-Analyser-main\Resume-Analyser-main\target\classes started by Fahad in F:\Download\Resume-Analyser-main\Resume-Analyser-main)
+2026-06-11 17:18:37.579 [main] [] [] INFO  c.a.R.a.ResumeAnalyserApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-11 17:18:38.465 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-11 17:18:38.575 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 96 ms. Found 7 JPA repository interfaces.
+2026-06-11 17:18:39.368 [main] [] [] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-06-11 17:18:39.384 [main] [] [] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-11 17:18:39.384 [main] [] [] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-11 17:18:39.384 [main] [] [] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-06-11 17:18:39.472 [main] [] [] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-11 17:18:39.472 [main] [] [] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1835 ms
+2026-06-11 17:18:39.604 [main] [] [] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-11 17:18:39.684 [main] [] [] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-06-11 17:18:39.734 [main] [] [] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-06-11 17:18:40.066 [main] [] [] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-11 17:18:40.501 [main] [] [] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.45
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-11 17:18:41.658 [main] [] [] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-11 17:18:41.967 [main] [] [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-11 17:18:43.225 [main] [] [] INFO  c.a.R.analyser.service.GroqClient - ==== Groq AI is ENABLED (model=llama-3.1-8b-instant) ====
+2026-06-11 17:18:43.471 [main] [] [] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-11 17:18:43.514 [main] [] [] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-06-11 17:18:43.879 [main] [] [] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-06-11 17:18:44.377 [main] [] [] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-11 17:18:44.386 [main] [] [] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-06-11 17:18:44.396 [main] [] [] INFO  c.a.R.a.ResumeAnalyserApplication - Started ResumeAnalyserApplication in 7.66 seconds (process running for 8.175)
+2026-06-11 17:19:28.038 [http-nio-8081-exec-1] [] [] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-11 17:19:28.246 [http-nio-8081-exec-1] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:19:28.311 [http-nio-8081-exec-1] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:19:28.342 [http-nio-8081-exec-1] [b7466951] [f915fbeb-0a3] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:19:42.183 [http-nio-8081-exec-2] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:19:42.192 [http-nio-8081-exec-2] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:19:42.254 [http-nio-8081-exec-2] [76383f9c] [65fbb045-4f8] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_job
+        (completed_at, created_at, email, error_message, job_type, max_retries, retry_count, roles, started_at, status, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-06-11 17:19:42.319 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=?
+2026-06-11 17:19:42.325 [analysis-1] [] [] INFO  c.a.R.a.service.AsyncAnalysisService - Starting async analysis jobId=9, email=sisai24424@gmail.com, roles=hi
+2026-06-11 17:19:42.333 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=?
+2026-06-11 17:19:42.341 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    update
+        analysis_job 
+    set
+        completed_at=?,
+        email=?,
+        error_message=?,
+        job_type=?,
+        max_retries=?,
+        retry_count=?,
+        roles=?,
+        started_at=?,
+        status=?,
+        updated_at=? 
+    where
+        id=?
+2026-06-11 17:19:42.370 [http-nio-8081-exec-3] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:19:42.378 [http-nio-8081-exec-3] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:19:42.560 [http-nio-8081-exec-3] [94e0d3b7] [bd1696b3-a90] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=? 
+        and aj1_0.email=?
+2026-06-11 17:19:42.915 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=?
+2026-06-11 17:19:42.915 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    update
+        analysis_job 
+    set
+        completed_at=?,
+        email=?,
+        error_message=?,
+        job_type=?,
+        max_retries=?,
+        retry_count=?,
+        roles=?,
+        started_at=?,
+        status=?,
+        updated_at=? 
+    where
+        id=?
+2026-06-11 17:19:44.096 [http-nio-8081-exec-4] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:19:44.112 [http-nio-8081-exec-4] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:19:44.120 [http-nio-8081-exec-4] [9c044a23] [62a38484-7f8] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=? 
+        and aj1_0.email=?
+2026-06-11 17:19:44.656 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=?
+2026-06-11 17:19:44.656 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    update
+        analysis_job 
+    set
+        completed_at=?,
+        email=?,
+        error_message=?,
+        job_type=?,
+        max_retries=?,
+        retry_count=?,
+        roles=?,
+        started_at=?,
+        status=?,
+        updated_at=? 
+    where
+        id=?
+2026-06-11 17:19:44.680 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result
+        (analyzed_at, atsbreakdown, atsoptimizationscore, dimension_explanations, dimension_scores, email, roles, score) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-06-11 17:19:44.704 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_cons
+        (analysis_result_id, cons) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.712 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_cons
+        (analysis_result_id, cons) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.712 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_cons
+        (analysis_result_id, cons) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.720 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_cons
+        (analysis_result_id, cons) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.720 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.728 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.736 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.736 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.736 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.736 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.744 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.744 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.744 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.744 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.752 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.755 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.755 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.755 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.760 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.760 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_missing_skills
+        (analysis_result_id, missing_skills) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.767 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_missing_skills
+        (analysis_result_id, missing_skills) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.767 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_missing_skills
+        (analysis_result_id, missing_skills) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.767 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_missing_skills
+        (analysis_result_id, missing_skills) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.767 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_pros
+        (analysis_result_id, pros) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.784 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_pros
+        (analysis_result_id, pros) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.784 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_pros
+        (analysis_result_id, pros) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.784 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_pros
+        (analysis_result_id, pros) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.784 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_suggestions
+        (analysis_result_id, suggestions) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.792 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_suggestions
+        (analysis_result_id, suggestions) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.800 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_suggestions
+        (analysis_result_id, suggestions) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.800 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_suggestions
+        (analysis_result_id, suggestions) 
+    values
+        (?, ?)
+2026-06-11 17:19:44.808 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:19:44.808 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:19:44.808 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=?
+2026-06-11 17:19:44.816 [analysis-1] [] [] DEBUG org.hibernate.SQL - 
+    update
+        analysis_job 
+    set
+        completed_at=?,
+        email=?,
+        error_message=?,
+        job_type=?,
+        max_retries=?,
+        retry_count=?,
+        roles=?,
+        started_at=?,
+        status=?,
+        updated_at=? 
+    where
+        id=?
+2026-06-11 17:19:44.816 [analysis-1] [] [] INFO  c.a.R.a.service.AsyncAnalysisService - Async analysis completed jobId=9, email=sisai24424@gmail.com, duration=2483ms
+2026-06-11 17:19:45.646 [http-nio-8081-exec-5] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:19:45.655 [http-nio-8081-exec-5] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:19:45.662 [http-nio-8081-exec-5] [a96799a6] [ab373170-bf4] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=? 
+        and aj1_0.email=?
+2026-06-11 17:19:45.670 [http-nio-8081-exec-5] [a96799a6] [ab373170-bf4] DEBUG org.hibernate.SQL - 
+    select
+        ar1_0.id,
+        ar1_0.analyzed_at,
+        ar1_0.atsbreakdown,
+        ar1_0.atsoptimizationscore,
+        ar1_0.dimension_explanations,
+        ar1_0.dimension_scores,
+        ar1_0.email,
+        ar1_0.roles,
+        ar1_0.score 
+    from
+        analysis_result ar1_0 
+    where
+        ar1_0.email=? 
+    order by
+        ar1_0.analyzed_at desc 
+    limit
+        ?
+2026-06-11 17:19:45.695 [http-nio-8081-exec-5] [a96799a6] [ab373170-bf4] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.analysis_result_id,
+        p1_0.pros 
+    from
+        analysis_result_pros p1_0 
+    where
+        p1_0.analysis_result_id=?
+2026-06-11 17:19:45.695 [http-nio-8081-exec-5] [a96799a6] [ab373170-bf4] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.analysis_result_id,
+        c1_0.cons 
+    from
+        analysis_result_cons c1_0 
+    where
+        c1_0.analysis_result_id=?
+2026-06-11 17:19:45.695 [http-nio-8081-exec-5] [a96799a6] [ab373170-bf4] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.analysis_result_id,
+        s1_0.suggestions 
+    from
+        analysis_result_suggestions s1_0 
+    where
+        s1_0.analysis_result_id=?
+2026-06-11 17:19:45.703 [http-nio-8081-exec-5] [a96799a6] [ab373170-bf4] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.analysis_result_id,
+        ms1_0.matched_skills 
+    from
+        analysis_result_matched_skills ms1_0 
+    where
+        ms1_0.analysis_result_id=?
+2026-06-11 17:19:45.703 [http-nio-8081-exec-5] [a96799a6] [ab373170-bf4] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.analysis_result_id,
+        ms1_0.missing_skills 
+    from
+        analysis_result_missing_skills ms1_0 
+    where
+        ms1_0.analysis_result_id=?
+2026-06-11 17:19:46.554 [http-nio-8081-exec-6] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:19:46.566 [http-nio-8081-exec-6] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:19:46.637 [http-nio-8081-exec-6] [0e62961a] [f4ff7de3-f45] DEBUG org.hibernate.SQL - 
+    select
+        ar1_0.id,
+        ar1_0.analyzed_at,
+        ar1_0.atsbreakdown,
+        ar1_0.atsoptimizationscore,
+        ar1_0.dimension_explanations,
+        ar1_0.dimension_scores,
+        ar1_0.email,
+        ar1_0.roles,
+        ar1_0.score 
+    from
+        analysis_result ar1_0 
+    where
+        ar1_0.email=? 
+    order by
+        ar1_0.analyzed_at desc 
+    limit
+        ?
+2026-06-11 17:19:47.786 [http-nio-8081-exec-6] [0e62961a] [f4ff7de3-f45] WARN  c.a.R.a.s.ResumeAnalysisService - Adzuna job fetch failed, returning report without job recommendations: 401 Unauthorized on GET request for "https://api.adzuna.com/v1/api/jobs/in/search/1": "{"display":"Authorisation failed","__CLASS__":"Adzuna::API::Response::Exception","doc":"https://api.adzuna.com/v1/doc","exception":"AUTH_FAIL"}"
+2026-06-11 17:19:47.787 [http-nio-8081-exec-6] [0e62961a] [f4ff7de3-f45] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.analysis_result_id,
+        p1_0.pros 
+    from
+        analysis_result_pros p1_0 
+    where
+        p1_0.analysis_result_id=?
+2026-06-11 17:19:47.795 [http-nio-8081-exec-6] [0e62961a] [f4ff7de3-f45] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.analysis_result_id,
+        c1_0.cons 
+    from
+        analysis_result_cons c1_0 
+    where
+        c1_0.analysis_result_id=?
+2026-06-11 17:19:47.795 [http-nio-8081-exec-6] [0e62961a] [f4ff7de3-f45] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.analysis_result_id,
+        s1_0.suggestions 
+    from
+        analysis_result_suggestions s1_0 
+    where
+        s1_0.analysis_result_id=?
+2026-06-11 17:19:47.795 [http-nio-8081-exec-6] [0e62961a] [f4ff7de3-f45] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.analysis_result_id,
+        ms1_0.matched_skills 
+    from
+        analysis_result_matched_skills ms1_0 
+    where
+        ms1_0.analysis_result_id=?
+2026-06-11 17:19:47.801 [http-nio-8081-exec-6] [0e62961a] [f4ff7de3-f45] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.analysis_result_id,
+        ms1_0.missing_skills 
+    from
+        analysis_result_missing_skills ms1_0 
+    where
+        ms1_0.analysis_result_id=?
+2026-06-11 17:20:01.324 [http-nio-8081-exec-7] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:01.331 [http-nio-8081-exec-7] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:01.344 [http-nio-8081-exec-8] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:01.348 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        ar1_0.id,
+        ar1_0.analyzed_at,
+        ar1_0.atsbreakdown,
+        ar1_0.atsoptimizationscore,
+        ar1_0.dimension_explanations,
+        ar1_0.dimension_scores,
+        ar1_0.email,
+        ar1_0.roles,
+        ar1_0.score 
+    from
+        analysis_result ar1_0 
+    where
+        ar1_0.email=? 
+    order by
+        ar1_0.analyzed_at desc
+2026-06-11 17:20:01.348 [http-nio-8081-exec-8] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:01.352 [http-nio-8081-exec-8] [ead06d7b] [1ed702cd-fa2] DEBUG org.hibernate.SQL - 
+    select
+        jmr1_0.id,
+        jmr1_0.category_breakdown,
+        jmr1_0.email,
+        jmr1_0.job_description,
+        jmr1_0.match_percentage,
+        jmr1_0.matched_at,
+        jmr1_0.roles 
+    from
+        jd_match_result jmr1_0 
+    where
+        jmr1_0.email=? 
+    order by
+        jmr1_0.matched_at desc
+2026-06-11 17:20:01.352 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.analysis_result_id,
+        p1_0.pros 
+    from
+        analysis_result_pros p1_0 
+    where
+        p1_0.analysis_result_id=?
+2026-06-11 17:20:01.361 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.analysis_result_id,
+        c1_0.cons 
+    from
+        analysis_result_cons c1_0 
+    where
+        c1_0.analysis_result_id=?
+2026-06-11 17:20:01.361 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.analysis_result_id,
+        s1_0.suggestions 
+    from
+        analysis_result_suggestions s1_0 
+    where
+        s1_0.analysis_result_id=?
+2026-06-11 17:20:01.368 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.analysis_result_id,
+        ms1_0.matched_skills 
+    from
+        analysis_result_matched_skills ms1_0 
+    where
+        ms1_0.analysis_result_id=?
+2026-06-11 17:20:01.368 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.analysis_result_id,
+        ms1_0.missing_skills 
+    from
+        analysis_result_missing_skills ms1_0 
+    where
+        ms1_0.analysis_result_id=?
+2026-06-11 17:20:01.368 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.analysis_result_id,
+        p1_0.pros 
+    from
+        analysis_result_pros p1_0 
+    where
+        p1_0.analysis_result_id=?
+2026-06-11 17:20:01.376 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.analysis_result_id,
+        c1_0.cons 
+    from
+        analysis_result_cons c1_0 
+    where
+        c1_0.analysis_result_id=?
+2026-06-11 17:20:01.376 [http-nio-8081-exec-8] [ead06d7b] [1ed702cd-fa2] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.jd_match_result_id,
+        ms1_0.matched_skills 
+    from
+        jd_match_result_matched_skills ms1_0 
+    where
+        ms1_0.jd_match_result_id=?
+2026-06-11 17:20:01.381 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.analysis_result_id,
+        s1_0.suggestions 
+    from
+        analysis_result_suggestions s1_0 
+    where
+        s1_0.analysis_result_id=?
+2026-06-11 17:20:01.381 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.analysis_result_id,
+        ms1_0.matched_skills 
+    from
+        analysis_result_matched_skills ms1_0 
+    where
+        ms1_0.analysis_result_id=?
+2026-06-11 17:20:01.381 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.analysis_result_id,
+        ms1_0.missing_skills 
+    from
+        analysis_result_missing_skills ms1_0 
+    where
+        ms1_0.analysis_result_id=?
+2026-06-11 17:20:01.381 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.analysis_result_id,
+        p1_0.pros 
+    from
+        analysis_result_pros p1_0 
+    where
+        p1_0.analysis_result_id=?
+2026-06-11 17:20:01.388 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.analysis_result_id,
+        c1_0.cons 
+    from
+        analysis_result_cons c1_0 
+    where
+        c1_0.analysis_result_id=?
+2026-06-11 17:20:01.388 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.analysis_result_id,
+        s1_0.suggestions 
+    from
+        analysis_result_suggestions s1_0 
+    where
+        s1_0.analysis_result_id=?
+2026-06-11 17:20:01.388 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.analysis_result_id,
+        ms1_0.matched_skills 
+    from
+        analysis_result_matched_skills ms1_0 
+    where
+        ms1_0.analysis_result_id=?
+2026-06-11 17:20:01.388 [http-nio-8081-exec-8] [ead06d7b] [1ed702cd-fa2] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.jd_match_result_id,
+        ms1_0.missing_skills 
+    from
+        jd_match_result_missing_skills ms1_0 
+    where
+        ms1_0.jd_match_result_id=?
+2026-06-11 17:20:01.396 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.analysis_result_id,
+        ms1_0.missing_skills 
+    from
+        analysis_result_missing_skills ms1_0 
+    where
+        ms1_0.analysis_result_id=?
+2026-06-11 17:20:01.396 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.analysis_result_id,
+        p1_0.pros 
+    from
+        analysis_result_pros p1_0 
+    where
+        p1_0.analysis_result_id=?
+2026-06-11 17:20:01.401 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.analysis_result_id,
+        c1_0.cons 
+    from
+        analysis_result_cons c1_0 
+    where
+        c1_0.analysis_result_id=?
+2026-06-11 17:20:01.401 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.analysis_result_id,
+        s1_0.suggestions 
+    from
+        analysis_result_suggestions s1_0 
+    where
+        s1_0.analysis_result_id=?
+2026-06-11 17:20:01.403 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.analysis_result_id,
+        ms1_0.matched_skills 
+    from
+        analysis_result_matched_skills ms1_0 
+    where
+        ms1_0.analysis_result_id=?
+2026-06-11 17:20:01.403 [http-nio-8081-exec-8] [ead06d7b] [1ed702cd-fa2] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.jd_match_result_id,
+        s1_0.strengths 
+    from
+        jd_match_result_strengths s1_0 
+    where
+        s1_0.jd_match_result_id=?
+2026-06-11 17:20:01.403 [http-nio-8081-exec-7] [ecaf4262] [fbd2d707-eb1] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.analysis_result_id,
+        ms1_0.missing_skills 
+    from
+        analysis_result_missing_skills ms1_0 
+    where
+        ms1_0.analysis_result_id=?
+2026-06-11 17:20:01.419 [http-nio-8081-exec-8] [ead06d7b] [1ed702cd-fa2] DEBUG org.hibernate.SQL - 
+    select
+        g1_0.jd_match_result_id,
+        g1_0.gaps 
+    from
+        jd_match_result_gaps g1_0 
+    where
+        g1_0.jd_match_result_id=?
+2026-06-11 17:20:01.428 [http-nio-8081-exec-8] [ead06d7b] [1ed702cd-fa2] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.jd_match_result_id,
+        r1_0.recommendations 
+    from
+        jd_match_result_recommendations r1_0 
+    where
+        r1_0.jd_match_result_id=?
+2026-06-11 17:20:01.445 [http-nio-8081-exec-8] [ead06d7b] [1ed702cd-fa2] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.jd_match_result_id,
+        ms1_0.matched_skills 
+    from
+        jd_match_result_matched_skills ms1_0 
+    where
+        ms1_0.jd_match_result_id=?
+2026-06-11 17:20:01.445 [http-nio-8081-exec-8] [ead06d7b] [1ed702cd-fa2] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.jd_match_result_id,
+        ms1_0.missing_skills 
+    from
+        jd_match_result_missing_skills ms1_0 
+    where
+        ms1_0.jd_match_result_id=?
+2026-06-11 17:20:01.445 [http-nio-8081-exec-8] [ead06d7b] [1ed702cd-fa2] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.jd_match_result_id,
+        s1_0.strengths 
+    from
+        jd_match_result_strengths s1_0 
+    where
+        s1_0.jd_match_result_id=?
+2026-06-11 17:20:01.445 [http-nio-8081-exec-8] [ead06d7b] [1ed702cd-fa2] DEBUG org.hibernate.SQL - 
+    select
+        g1_0.jd_match_result_id,
+        g1_0.gaps 
+    from
+        jd_match_result_gaps g1_0 
+    where
+        g1_0.jd_match_result_id=?
+2026-06-11 17:20:01.445 [http-nio-8081-exec-8] [ead06d7b] [1ed702cd-fa2] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.jd_match_result_id,
+        r1_0.recommendations 
+    from
+        jd_match_result_recommendations r1_0 
+    where
+        r1_0.jd_match_result_id=?
+2026-06-11 17:20:14.231 [http-nio-8081-exec-9] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:14.231 [http-nio-8081-exec-9] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:14.244 [http-nio-8081-exec-9] [31beaca6] [4fe4f384-685] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_job
+        (completed_at, created_at, email, error_message, job_type, max_retries, retry_count, roles, started_at, status, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-06-11 17:20:14.261 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=?
+2026-06-11 17:20:14.270 [analysis-2] [] [] INFO  c.a.R.a.service.AsyncAnalysisService - Starting async analysis jobId=10, email=sisai24424@gmail.com, roles=deveo
+2026-06-11 17:20:14.270 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=?
+2026-06-11 17:20:14.277 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    update
+        analysis_job 
+    set
+        completed_at=?,
+        email=?,
+        error_message=?,
+        job_type=?,
+        max_retries=?,
+        retry_count=?,
+        roles=?,
+        started_at=?,
+        status=?,
+        updated_at=? 
+    where
+        id=?
+2026-06-11 17:20:14.285 [http-nio-8081-exec-10] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:14.293 [http-nio-8081-exec-10] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:14.295 [http-nio-8081-exec-10] [71200abd] [76bb0247-328] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=? 
+        and aj1_0.email=?
+2026-06-11 17:20:14.328 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=?
+2026-06-11 17:20:14.328 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    update
+        analysis_job 
+    set
+        completed_at=?,
+        email=?,
+        error_message=?,
+        job_type=?,
+        max_retries=?,
+        retry_count=?,
+        roles=?,
+        started_at=?,
+        status=?,
+        updated_at=? 
+    where
+        id=?
+2026-06-11 17:20:15.809 [http-nio-8081-exec-1] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:15.825 [http-nio-8081-exec-1] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:15.831 [http-nio-8081-exec-1] [1cdfcee9] [606e51f3-953] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=? 
+        and aj1_0.email=?
+2026-06-11 17:20:15.831 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=?
+2026-06-11 17:20:15.831 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    update
+        analysis_job 
+    set
+        completed_at=?,
+        email=?,
+        error_message=?,
+        job_type=?,
+        max_retries=?,
+        retry_count=?,
+        roles=?,
+        started_at=?,
+        status=?,
+        updated_at=? 
+    where
+        id=?
+2026-06-11 17:20:15.845 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result
+        (analyzed_at, atsbreakdown, atsoptimizationscore, dimension_explanations, dimension_scores, email, roles, score) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-06-11 17:20:15.845 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_cons
+        (analysis_result_id, cons) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.845 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_cons
+        (analysis_result_id, cons) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.853 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_cons
+        (analysis_result_id, cons) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.853 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_cons
+        (analysis_result_id, cons) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.853 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.861 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.861 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.861 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.861 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.861 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.861 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.861 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.869 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.869 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.875 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.875 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.878 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.878 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.878 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_matched_skills
+        (analysis_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.881 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_missing_skills
+        (analysis_result_id, missing_skills) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.881 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_missing_skills
+        (analysis_result_id, missing_skills) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.886 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_missing_skills
+        (analysis_result_id, missing_skills) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.886 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_missing_skills
+        (analysis_result_id, missing_skills) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.886 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_pros
+        (analysis_result_id, pros) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.886 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_pros
+        (analysis_result_id, pros) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.886 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_pros
+        (analysis_result_id, pros) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.886 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_pros
+        (analysis_result_id, pros) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.894 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_suggestions
+        (analysis_result_id, suggestions) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.897 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_suggestions
+        (analysis_result_id, suggestions) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.897 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_suggestions
+        (analysis_result_id, suggestions) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.897 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_result_suggestions
+        (analysis_result_id, suggestions) 
+    values
+        (?, ?)
+2026-06-11 17:20:15.902 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:15.910 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:15.912 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=?
+2026-06-11 17:20:15.912 [analysis-2] [] [] DEBUG org.hibernate.SQL - 
+    update
+        analysis_job 
+    set
+        completed_at=?,
+        email=?,
+        error_message=?,
+        job_type=?,
+        max_retries=?,
+        retry_count=?,
+        roles=?,
+        started_at=?,
+        status=?,
+        updated_at=? 
+    where
+        id=?
+2026-06-11 17:20:15.919 [analysis-2] [] [] INFO  c.a.R.a.service.AsyncAnalysisService - Async analysis completed jobId=10, email=sisai24424@gmail.com, duration=1642ms
+2026-06-11 17:20:17.339 [http-nio-8081-exec-2] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:17.355 [http-nio-8081-exec-2] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:17.365 [http-nio-8081-exec-2] [727a8484] [48a33448-853] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=? 
+        and aj1_0.email=?
+2026-06-11 17:20:17.372 [http-nio-8081-exec-2] [727a8484] [48a33448-853] DEBUG org.hibernate.SQL - 
+    select
+        ar1_0.id,
+        ar1_0.analyzed_at,
+        ar1_0.atsbreakdown,
+        ar1_0.atsoptimizationscore,
+        ar1_0.dimension_explanations,
+        ar1_0.dimension_scores,
+        ar1_0.email,
+        ar1_0.roles,
+        ar1_0.score 
+    from
+        analysis_result ar1_0 
+    where
+        ar1_0.email=? 
+    order by
+        ar1_0.analyzed_at desc 
+    limit
+        ?
+2026-06-11 17:20:17.372 [http-nio-8081-exec-2] [727a8484] [48a33448-853] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.analysis_result_id,
+        p1_0.pros 
+    from
+        analysis_result_pros p1_0 
+    where
+        p1_0.analysis_result_id=?
+2026-06-11 17:20:17.372 [http-nio-8081-exec-2] [727a8484] [48a33448-853] DEBUG org.hibernate.SQL - 
+    select
+        c1_0.analysis_result_id,
+        c1_0.cons 
+    from
+        analysis_result_cons c1_0 
+    where
+        c1_0.analysis_result_id=?
+2026-06-11 17:20:17.372 [http-nio-8081-exec-2] [727a8484] [48a33448-853] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.analysis_result_id,
+        s1_0.suggestions 
+    from
+        analysis_result_suggestions s1_0 
+    where
+        s1_0.analysis_result_id=?
+2026-06-11 17:20:17.381 [http-nio-8081-exec-2] [727a8484] [48a33448-853] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.analysis_result_id,
+        ms1_0.matched_skills 
+    from
+        analysis_result_matched_skills ms1_0 
+    where
+        ms1_0.analysis_result_id=?
+2026-06-11 17:20:17.381 [http-nio-8081-exec-2] [727a8484] [48a33448-853] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.analysis_result_id,
+        ms1_0.missing_skills 
+    from
+        analysis_result_missing_skills ms1_0 
+    where
+        ms1_0.analysis_result_id=?
+2026-06-11 17:20:18.213 [http-nio-8081-exec-3] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:18.213 [http-nio-8081-exec-3] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:37.877 [http-nio-8081-exec-4] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:37.877 [http-nio-8081-exec-5] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:37.889 [http-nio-8081-exec-4] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:37.897 [http-nio-8081-exec-5] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:41.211 [http-nio-8081-exec-7] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:41.211 [http-nio-8081-exec-6] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:41.211 [http-nio-8081-exec-6] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:20:41.211 [http-nio-8081-exec-7] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:21:04.832 [http-nio-8081-exec-8] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:21:04.872 [http-nio-8081-exec-8] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:21:04.914 [http-nio-8081-exec-8] [8ad11d6f] [8a974d43-f21] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        analysis_job
+        (completed_at, created_at, email, error_message, job_type, max_retries, retry_count, roles, started_at, status, updated_at) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-06-11 17:21:04.952 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=?
+2026-06-11 17:21:04.957 [http-nio-8081-exec-9] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:21:04.976 [http-nio-8081-exec-9] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:21:04.978 [analysis-3] [] [] INFO  c.a.R.a.service.AsyncAnalysisService - Starting async JD match jobId=11, email=sisai24424@gmail.com, roles=frontedn
+2026-06-11 17:21:04.978 [http-nio-8081-exec-9] [e666f2a0] [fb77a756-c58] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=? 
+        and aj1_0.email=?
+2026-06-11 17:21:04.986 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=?
+2026-06-11 17:21:04.986 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    update
+        analysis_job 
+    set
+        completed_at=?,
+        email=?,
+        error_message=?,
+        job_type=?,
+        max_retries=?,
+        retry_count=?,
+        roles=?,
+        started_at=?,
+        status=?,
+        updated_at=? 
+    where
+        id=?
+2026-06-11 17:21:05.018 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=?
+2026-06-11 17:21:05.018 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    update
+        analysis_job 
+    set
+        completed_at=?,
+        email=?,
+        error_message=?,
+        job_type=?,
+        max_retries=?,
+        retry_count=?,
+        roles=?,
+        started_at=?,
+        status=?,
+        updated_at=? 
+    where
+        id=?
+2026-06-11 17:21:06.496 [http-nio-8081-exec-10] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:21:06.501 [http-nio-8081-exec-10] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:21:06.501 [http-nio-8081-exec-10] [e519812c] [f856c28d-0a5] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=? 
+        and aj1_0.email=?
+2026-06-11 17:21:06.767 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=?
+2026-06-11 17:21:06.812 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    update
+        analysis_job 
+    set
+        completed_at=?,
+        email=?,
+        error_message=?,
+        job_type=?,
+        max_retries=?,
+        retry_count=?,
+        roles=?,
+        started_at=?,
+        status=?,
+        updated_at=? 
+    where
+        id=?
+2026-06-11 17:21:06.828 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result
+        (category_breakdown, email, job_description, match_percentage, matched_at, roles) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-06-11 17:21:06.845 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_gaps
+        (jd_match_result_id, gaps) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.845 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_gaps
+        (jd_match_result_id, gaps) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.852 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_gaps
+        (jd_match_result_id, gaps) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.854 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_matched_skills
+        (jd_match_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.854 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_matched_skills
+        (jd_match_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.854 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_matched_skills
+        (jd_match_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.854 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_matched_skills
+        (jd_match_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.861 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_matched_skills
+        (jd_match_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.861 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_matched_skills
+        (jd_match_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.861 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_matched_skills
+        (jd_match_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.861 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_matched_skills
+        (jd_match_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.861 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_matched_skills
+        (jd_match_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.861 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_matched_skills
+        (jd_match_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.861 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_matched_skills
+        (jd_match_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.861 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_matched_skills
+        (jd_match_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.869 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_matched_skills
+        (jd_match_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.869 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_matched_skills
+        (jd_match_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.869 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_matched_skills
+        (jd_match_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.869 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_matched_skills
+        (jd_match_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.869 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_matched_skills
+        (jd_match_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.877 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_matched_skills
+        (jd_match_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.877 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_matched_skills
+        (jd_match_result_id, matched_skills) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.877 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_recommendations
+        (jd_match_result_id, recommendations) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.877 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_recommendations
+        (jd_match_result_id, recommendations) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.877 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_recommendations
+        (jd_match_result_id, recommendations) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.877 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_strengths
+        (jd_match_result_id, strengths) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.877 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_strengths
+        (jd_match_result_id, strengths) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.877 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        jd_match_result_strengths
+        (jd_match_result_id, strengths) 
+    values
+        (?, ?)
+2026-06-11 17:21:06.885 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=?
+2026-06-11 17:21:06.893 [analysis-3] [] [] DEBUG org.hibernate.SQL - 
+    update
+        analysis_job 
+    set
+        completed_at=?,
+        email=?,
+        error_message=?,
+        job_type=?,
+        max_retries=?,
+        retry_count=?,
+        roles=?,
+        started_at=?,
+        status=?,
+        updated_at=? 
+    where
+        id=?
+2026-06-11 17:21:08.027 [http-nio-8081-exec-1] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:21:08.041 [http-nio-8081-exec-1] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:21:08.044 [http-nio-8081-exec-1] [dae868be] [1b0be985-647] DEBUG org.hibernate.SQL - 
+    select
+        aj1_0.id,
+        aj1_0.completed_at,
+        aj1_0.created_at,
+        aj1_0.email,
+        aj1_0.error_message,
+        aj1_0.job_type,
+        aj1_0.max_retries,
+        aj1_0.retry_count,
+        aj1_0.roles,
+        aj1_0.started_at,
+        aj1_0.status,
+        aj1_0.updated_at 
+    from
+        analysis_job aj1_0 
+    where
+        aj1_0.id=? 
+        and aj1_0.email=?
+2026-06-11 17:21:08.876 [http-nio-8081-exec-2] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:21:08.882 [http-nio-8081-exec-2] [] [] DEBUG org.hibernate.SQL - 
+    select
+        u1_0.email,
+        u1_0.created_at,
+        u1_0.password,
+        u1_0.previous_results,
+        u1_0.reset_expiration,
+        u1_0.reset_otp,
+        u1_0.update_at,
+        u1_0.username 
+    from
+        user u1_0 
+    where
+        u1_0.email=?
+2026-06-11 17:21:08.893 [http-nio-8081-exec-2] [c4282e24] [2f13e79d-054] DEBUG org.hibernate.SQL - 
+    select
+        jmr1_0.id,
+        jmr1_0.category_breakdown,
+        jmr1_0.email,
+        jmr1_0.job_description,
+        jmr1_0.match_percentage,
+        jmr1_0.matched_at,
+        jmr1_0.roles 
+    from
+        jd_match_result jmr1_0 
+    where
+        jmr1_0.email=? 
+    order by
+        jmr1_0.match_percentage desc 
+    limit
+        ?
+2026-06-11 17:21:08.901 [http-nio-8081-exec-2] [c4282e24] [2f13e79d-054] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.jd_match_result_id,
+        ms1_0.matched_skills 
+    from
+        jd_match_result_matched_skills ms1_0 
+    where
+        ms1_0.jd_match_result_id=?
+2026-06-11 17:21:08.907 [http-nio-8081-exec-2] [c4282e24] [2f13e79d-054] DEBUG org.hibernate.SQL - 
+    select
+        ms1_0.jd_match_result_id,
+        ms1_0.missing_skills 
+    from
+        jd_match_result_missing_skills ms1_0 
+    where
+        ms1_0.jd_match_result_id=?
+2026-06-11 17:21:08.907 [http-nio-8081-exec-2] [c4282e24] [2f13e79d-054] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.jd_match_result_id,
+        s1_0.strengths 
+    from
+        jd_match_result_strengths s1_0 
+    where
+        s1_0.jd_match_result_id=?
+2026-06-11 17:21:08.909 [http-nio-8081-exec-2] [c4282e24] [2f13e79d-054] DEBUG org.hibernate.SQL - 
+    select
+        g1_0.jd_match_result_id,
+        g1_0.gaps 
+    from
+        jd_match_result_gaps g1_0 
+    where
+        g1_0.jd_match_result_id=?
+2026-06-11 17:21:08.911 [http-nio-8081-exec-2] [c4282e24] [2f13e79d-054] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.jd_match_result_id,
+        r1_0.recommendations 
+    from
+        jd_match_result_recommendations r1_0 
+    where
+        r1_0.jd_match_result_id=?
+2026-06-11 17:52:18.119 [SpringApplicationShutdownHook] [] [] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-11 17:52:18.159 [tomcat-shutdown] [] [] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-11 17:52:18.181 [SpringApplicationShutdownHook] [] [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-11 17:52:38.494 [background-preinit] [] [] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2026-06-11 17:52:38.551 [main] [] [] INFO  c.a.R.a.ResumeAnalyserApplication - Starting ResumeAnalyserApplication using Java 17.0.15 with PID 5536 (F:\Download\Resume-Analyser-main\Resume-Analyser-main\target\classes started by Fahad in F:\Download\Resume-Analyser-main\Resume-Analyser-main)
+2026-06-11 17:52:38.551 [main] [] [] INFO  c.a.R.a.ResumeAnalyserApplication - No active profile set, falling back to 1 default profile: "default"
+2026-06-11 17:52:39.338 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-11 17:52:39.417 [main] [] [] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 7 JPA repository interfaces.
+2026-06-11 17:52:40.030 [main] [] [] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-06-11 17:52:40.049 [main] [] [] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-06-11 17:52:40.058 [main] [] [] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-06-11 17:52:40.058 [main] [] [] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.44]
+2026-06-11 17:52:40.178 [main] [] [] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-06-11 17:52:40.178 [main] [] [] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1583 ms
+2026-06-11 17:52:40.480 [main] [] [] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-11 17:52:40.970 [main] [] [] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.26.Final
+2026-06-11 17:52:41.279 [main] [] [] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-06-11 17:52:41.927 [main] [] [] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-11 17:52:42.336 [main] [] [] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.45
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-11 17:52:43.521 [main] [] [] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-11 17:52:43.694 [main] [] [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-11 17:52:45.849 [main] [] [] INFO  c.a.R.analyser.service.GroqClient - ==== Groq AI is ENABLED (model=llama-3.1-8b-instant) ====
+2026-06-11 17:52:46.047 [main] [] [] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-11 17:52:46.079 [main] [] [] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2026-06-11 17:52:46.224 [main] [] [] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-06-11 17:52:46.567 [main] [] [] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-06-11 17:52:46.583 [main] [] [] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-06-11 17:52:46.598 [main] [] [] INFO  c.a.R.a.ResumeAnalyserApplication - Started ResumeAnalyserApplication in 8.783 seconds (process running for 9.128)
+2026-06-11 17:53:09.718 [http-nio-8081-exec-2] [] [] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-11 18:01:49.758 [SpringApplicationShutdownHook] [] [] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-11 18:01:49.783 [tomcat-shutdown] [] [] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-11 18:01:49.798 [SpringApplicationShutdownHook] [] [] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'

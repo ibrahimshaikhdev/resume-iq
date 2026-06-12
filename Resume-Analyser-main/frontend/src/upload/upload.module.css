@@ -1,0 +1,669 @@
+.container {
+    background-color: #0a0a0a;
+    color: #e5e7eb;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navbar */
+.nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 24px;
+    height: 64px;
+    backdrop-filter: blur(12px);
+    background: rgba(10, 10, 10, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    z-index: 100;
+}
+
+.brand {
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.5px;
+    cursor: pointer;
+}
+
+.navbtn {
+    border: 1px solid rgba(124, 58, 237, 0.4);
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: transparent;
+    color: #e5e7eb;
+    font-size: 14px;
+}
+
+.navbtn:hover {
+    background: rgba(124, 58, 237, 0.15);
+    border-color: #7c3aed;
+}
+
+/* Content */
+.content {
+    display: flex;
+    gap: 24px;
+    margin-top: 88px;
+    padding: 0 24px 40px;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+}
+
+.uploadcontainer,
+.guidelinescontainer {
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 28px;
+    backdrop-filter: blur(10px);
+}
+
+.uploadcontainer {
+    flex: 1.5;
+}
+
+.guidelinescontainer {
+    flex: 1;
+}
+
+.uploadcontainer form {
+    display: flex;
+    flex-direction: column;
+}
+
+.uploadcontainer h2,
+.guidelinescontainer h2 {
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    margin: 0 0 20px;
+    font-size: 22px;
+}
+
+.guidelinescontainer h2 {
+    text-align: left;
+}
+
+.formlabel {
+    font-weight: 600;
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: #d1d5db;
+}
+
+.textinput {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0 0 20px;
+    padding: 12px 14px;
+    color: #e5e7eb;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    font-size: 14px;
+    transition: border-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.textinput::placeholder {
+    color: #6b7280;
+}
+
+.textinput:focus {
+    outline: none;
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+.fileinp {
+    margin: 0 0 20px;
+    border: 2px dashed rgba(255, 255, 255, 0.12);
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 28px;
+    display: flex;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: border-color 0.2s;
+}
+
+.fileinp:hover {
+    border-color: rgba(124, 58, 237, 0.5);
+    background: rgba(124, 58, 237, 0.05);
+}
+
+.fileinp p {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 14px;
+    margin: 0 0 12px;
+}
+
+.fileinp h5 {
+    border: none;
+    margin: 0 0 8px;
+    padding: 8px 16px;
+    font-weight: 600;
+    color: #e5e7eb;
+    border-radius: 8px;
+    background: rgba(124, 58, 237, 0.2);
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.fileinp h5:hover {
+    background: rgba(124, 58, 237, 0.3);
+    transform: scale(1.02);
+}
+
+.fileinp h5:active {
+    transform: scale(0.98);
+}
+
+.spn {
+    text-align: center;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.submitBtn {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.submitBtn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
+}
+
+.submitBtn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+/* Guidelines */
+.guidelinescontainer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.guidelinescontainer li {
+    margin: 12px 0;
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #d1d5db;
+}
+
+.guidelinescontainer li span {
+    font-weight: 600;
+    color: #a78bfa;
+}
+
+/* JD Matching */
+.jdToggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    background: rgba(124, 58, 237, 0.08);
+    border: 1px dashed rgba(124, 58, 237, 0.3);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+    color: #a78bfa;
+}
+
+.jdToggle:hover {
+    background: rgba(124, 58, 237, 0.14);
+    border-color: rgba(124, 58, 237, 0.5);
+}
+
+.jdToggle i {
+    font-size: 12px;
+    transition: transform 0.2s;
+}
+
+.jdSection {
+    margin-bottom: 16px;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.jdTextarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #e5e7eb;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.2s;
+    line-height: 1.5;
+}
+
+.jdTextarea::placeholder {
+    color: #6b7280;
+}
+
+.jdTextarea:focus {
+    outline: none;
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+.btnGroup {
+    display: flex;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.btnGroup .submitBtn {
+    flex: 1;
+}
+
+.matchbtn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(135deg, #ec4899, #f97316);
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.matchbtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(236, 72, 153, 0.3);
+}
+
+.matchbtn:active {
+    transform: translateY(0);
+}
+
+.matchbtn i,
+.submitBtn i {
+    margin-right: 6px;
+}
+
+.guidelinescontainer li i {
+    color: #7c3aed;
+    margin-right: 8px;
+}
+
+/* JD Section */
+.jdToggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+    background: rgba(124, 58, 237, 0.08);
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #a78bfa;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.jdToggle:hover {
+    background: rgba(124, 58, 237, 0.12);
+    border-color: rgba(124, 58, 237, 0.35);
+}
+
+.jdToggle i {
+    font-size: 12px;
+}
+
+.jdSection {
+    margin-bottom: 16px;
+    animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.jdTextarea {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 14px;
+    color: #e5e7eb;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.jdTextarea::placeholder {
+    color: #6b7280;
+}
+
+.jdTextarea:focus {
+    outline: none;
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+.btnGroup {
+    display: flex;
+    gap: 12px;
+}
+
+.btnGroup .submitBtn {
+    flex: 1;
+}
+
+.matchbtn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(135deg, #059669, #10b981);
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.matchbtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+}
+
+.matchbtn:active {
+    transform: translateY(0);
+}
+
+/* New Upload Form Layout */
+.navActions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.doc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 88px;
+    width: 100%;
+    padding: 0 24px 40px;
+    box-sizing: border-box;
+}
+
+.tabSwitch {
+    display: flex;
+    gap: 4px;
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 4px;
+    margin-bottom: 24px;
+}
+
+.tab {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #9ca3af;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tab:hover {
+    color: #e5e7eb;
+}
+
+.activeTab {
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: white;
+}
+
+.upform {
+    width: 100%;
+    max-width: 540px;
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 36px;
+    backdrop-filter: blur(10px);
+}
+
+.formHeader {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.formHeader h1 {
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0 0 8px;
+}
+
+.formHeader p {
+    color: #9ca3af;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.inpgp {
+    margin-bottom: 20px;
+}
+
+.inplabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #d1d5db;
+    margin-bottom: 8px;
+}
+
+.inplabel i {
+    color: #7c3aed;
+    font-size: 13px;
+}
+
+.roleinput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #e5e7eb;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.roleinput::placeholder {
+    color: #6b7280;
+}
+
+.roleinput:focus {
+    outline: none;
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+.fileInput {
+    border: 2px dashed rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.fileInput:hover {
+    border-color: rgba(124, 58, 237, 0.5);
+    background: rgba(124, 58, 237, 0.05);
+}
+
+.fileInput input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.fileInput i {
+    font-size: 28px;
+    color: #7c3aed;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.fileInput span {
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+.upbtn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.upbtn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
+}
+
+.upbtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.guestNote {
+    text-align: center;
+    color: #6b7280;
+    font-size: 12px;
+    margin: 16px 0 0;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.guestNote i {
+    color: #7c3aed;
+    margin-top: 2px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        margin-top: 80px;
+    }
+
+    .uploadcontainer,
+    .guidelinescontainer {
+        width: 100%;
+    }
+
+    .upform {
+        padding: 24px;
+    }
+
+    .tabSwitch {
+        flex-direction: column;
+    }
+
+    .tab {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .brand {
+        font-size: 20px;
+    }
+
+    .content {
+        padding: 0 12px 24px;
+    }
+
+    .uploadcontainer,
+    .guidelinescontainer {
+        padding: 20px;
+    }
+
+    .doc {
+        padding: 0 12px 24px;
+    }
+}

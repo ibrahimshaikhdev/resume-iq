@@ -1,0 +1,158 @@
+.wrapper {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ATS Sub-Scores Section */
+.section {
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.sectionTitle {
+    background: linear-gradient(135deg, #1e1b4b, #312e81);
+    padding: 14px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.sectionTitle i {
+    color: #a78bfa;
+}
+
+.barsContainer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.barRow {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.barLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #d1d5db;
+}
+
+.barLabel i {
+    color: #7c3aed;
+    font-size: 12px;
+    width: 16px;
+    text-align: center;
+}
+
+.barValue {
+    margin-left: auto;
+    color: #9ca3af;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.barTrack {
+    width: 100%;
+    height: 8px;
+    background: #1a1a1a;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.barFill {
+    height: 100%;
+    background: linear-gradient(90deg, #7c3aed, #ec4899);
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+/* Skill Gap Heatmap */
+.heatmapSection {
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.heatmapGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 8px;
+    padding: 20px;
+}
+
+.heatmapCell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid;
+    font-size: 13px;
+    font-weight: 500;
+    transition: transform 0.15s;
+}
+
+.heatmapCell:hover {
+    transform: scale(1.02);
+}
+
+.heatmapCell i {
+    font-size: 12px;
+    width: 14px;
+    text-align: center;
+}
+
+.heatmapLegend {
+    display: flex;
+    gap: 24px;
+    padding: 12px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    justify-content: center;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.legendDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.emptyState {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 20px;
+    color: #6b7280;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Responsive */
+@media screen and (max-width: 640px) {
+    .heatmapGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

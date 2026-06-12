@@ -1,0 +1,290 @@
+.container {
+    background-color: #0a0a0a;
+    color: #e5e7eb;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navbar */
+.nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 24px;
+    height: 64px;
+    backdrop-filter: blur(12px);
+    background: rgba(10, 10, 10, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.brand {
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.5px;
+    cursor: pointer;
+}
+
+.navbtn {
+    border: 1px solid rgba(124, 58, 237, 0.4);
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: transparent;
+    color: #e5e7eb;
+    font-size: 14px;
+}
+
+.navbtn:hover {
+    background: rgba(124, 58, 237, 0.15);
+    border-color: #7c3aed;
+}
+
+/* Content */
+.content {
+    display: flex;
+    justify-content: center;
+    margin-top: 88px;
+    padding: 0 24px 40px;
+    width: 100%;
+    max-width: 640px;
+    box-sizing: border-box;
+}
+
+.progressCard {
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 32px;
+    backdrop-filter: blur(10px);
+    width: 100%;
+}
+
+.progressCard h2 {
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    margin: 0 0 8px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.progressCard h2 i {
+    font-size: 20px;
+}
+
+/* Timer */
+.timer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #9ca3af;
+    font-size: 14px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.timer i {
+    color: #7c3aed;
+}
+
+/* Stage Progress */
+.stageContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.stageWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.stage {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.stageComplete {
+    background: rgba(16, 185, 129, 0.06);
+}
+
+.stageCurrent {
+    background: rgba(124, 58, 237, 0.1);
+    border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.stagePending {
+    opacity: 0.4;
+}
+
+.stageIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.05);
+    color: #6b7280;
+    transition: all 0.3s ease;
+}
+
+.stageComplete .stageIcon {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+}
+
+.stageCurrent .stageIcon {
+    background: rgba(124, 58, 237, 0.2);
+    color: #a78bfa;
+    box-shadow: 0 0 16px rgba(124, 58, 237, 0.3);
+}
+
+.stageInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.stageLabel {
+    font-weight: 600;
+    font-size: 15px;
+    color: #e5e7eb;
+}
+
+.stageDesc {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.stageComplete .stageLabel {
+    color: #10b981;
+}
+
+.stageCurrent .stageLabel {
+    color: #a78bfa;
+}
+
+/* Stage connector line */
+.stageLine {
+    width: 2px;
+    height: 20px;
+    margin-left: 35px;
+    background: rgba(255, 255, 255, 0.08);
+    transition: background 0.3s ease;
+}
+
+.stageLineComplete {
+    background: #10b981;
+}
+
+/* Retry info */
+.retryInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 12px 16px;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: 10px;
+    color: #fbbf24;
+    font-size: 14px;
+}
+
+/* Failed actions */
+.failedActions {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.retryBtn {
+    padding: 12px 32px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.retryBtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
+}
+
+/* Tips */
+.tips {
+    margin-top: 24px;
+    padding: 14px 16px;
+    background: rgba(124, 58, 237, 0.06);
+    border: 1px solid rgba(124, 58, 237, 0.12);
+    border-radius: 10px;
+}
+
+.tips p {
+    margin: 0;
+    font-size: 13px;
+    color: #9ca3af;
+    line-height: 1.5;
+}
+
+.tips i {
+    color: #fbbf24;
+    margin-right: 8px;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+    .content {
+        padding: 0 12px 24px;
+    }
+
+    .progressCard {
+        padding: 24px 18px;
+    }
+
+    .stage {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .stageIcon {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .stageLine {
+        margin-left: 31px;
+    }
+}

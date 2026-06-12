@@ -1,0 +1,204 @@
+.container {
+    background-color: #0a0a0a;
+    color: #e5e7eb;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 24px;
+    height: 64px;
+    backdrop-filter: blur(12px);
+    background: rgba(10, 10, 10, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    z-index: 100;
+}
+
+.brand {
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.5px;
+    cursor: pointer;
+}
+
+.navActions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.navbtn {
+    border: 1px solid rgba(124, 58, 237, 0.4);
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: transparent;
+    color: #e5e7eb;
+    font-size: 14px;
+}
+
+.navbtn:hover {
+    background: rgba(124, 58, 237, 0.15);
+    border-color: #7c3aed;
+}
+
+.doc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 88px;
+    width: 100%;
+    padding: 0 24px 40px;
+    box-sizing: border-box;
+}
+
+.report {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.scoreCard {
+    flex: 1;
+    max-width: 300px;
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.breakdownSection {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 32px;
+}
+
+/* Upsell Card */
+.upsellCard {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    margin-bottom: 32px;
+}
+
+.upsellIcon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(236, 72, 153, 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+    color: #a78bfa;
+}
+
+.upsellCard h3 {
+    font-size: 22px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 0 0 8px;
+}
+
+.upsellCard > p {
+    color: #9ca3af;
+    font-size: 15px;
+    margin: 0 0 20px;
+}
+
+.featureList {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 28px;
+    max-width: 320px;
+    text-align: left;
+}
+
+.featureList li {
+    padding: 8px 0;
+    color: #d1d5db;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.featureList li:last-child {
+    border-bottom: none;
+}
+
+.featureList li i {
+    color: #22c55e;
+    font-size: 12px;
+}
+
+.signupBtn {
+    padding: 14px 40px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.signupBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(124, 58, 237, 0.4);
+}
+
+.note {
+    color: #6b7280;
+    font-size: 12px;
+    margin: 16px 0 0;
+}
+
+@media screen and (max-width: 640px) {
+    .report {
+        flex-direction: column;
+    }
+
+    .scoreCard {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .upsellCard {
+        padding: 28px 20px;
+    }
+}

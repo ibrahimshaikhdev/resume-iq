@@ -1,0 +1,304 @@
+.container {
+    background-color: #0a0a0a;
+    color: #e5e7eb;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 24px;
+    height: 64px;
+    backdrop-filter: blur(12px);
+    background: rgba(10, 10, 10, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+.brand {
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navRight {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.navbtn {
+    border: 1px solid rgba(124, 58, 237, 0.4);
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: transparent;
+    color: #e5e7eb;
+    font-size: 14px;
+}
+
+.navbtn:hover {
+    background: rgba(124, 58, 237, 0.15);
+    border-color: #7c3aed;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 100vh;
+    color: #9ca3af;
+    font-size: 18px;
+}
+
+.loading i {
+    font-size: 24px;
+    color: #7c3aed;
+}
+
+.content {
+    margin-top: 80px;
+    padding: 0 24px 40px;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section {
+    margin-bottom: 32px;
+}
+
+.section h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #e5e7eb;
+    margin: 0 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section h2 i {
+    color: #7c3aed;
+}
+
+/* Health Grid */
+.healthGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.healthCard {
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.healthUp .healthIcon {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+}
+
+.healthDown .healthIcon {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+}
+
+.healthIcon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.healthCard h3 {
+    margin: 0;
+    font-size: 14px;
+    color: #9ca3af;
+    font-weight: 500;
+}
+
+.healthCard span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.progressBar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 2px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: linear-gradient(90deg, #7c3aed, #ec4899);
+    border-radius: 2px;
+    transition: width 0.5s ease;
+}
+
+/* Metrics Grid */
+.metricsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+}
+
+.metricCard {
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.metricIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(124, 58, 237, 0.15);
+    color: #a78bfa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    font-size: 18px;
+}
+
+.metricValue {
+    font-size: 24px;
+    font-weight: 700;
+    color: #e5e7eb;
+    margin-bottom: 4px;
+}
+
+.metricLabel {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* Cache Bar */
+.cacheBar {
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.cacheBarInner {
+    display: flex;
+    height: 36px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.cacheHits {
+    background: linear-gradient(90deg, #7c3aed, #a855f7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    min-width: 60px;
+}
+
+.cacheMisses {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+/* Timing Table */
+.timingTable {
+    background: rgba(26, 26, 26, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.timingHeader, .timingRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+}
+
+.timingHeader {
+    background: rgba(124, 58, 237, 0.1);
+    font-weight: 600;
+    font-size: 14px;
+    color: #a78bfa;
+}
+
+.timingRow {
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    font-size: 14px;
+}
+
+.timingRow:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+@media (max-width: 640px) {
+    .content {
+        padding: 0 12px 24px;
+    }
+
+    .metricsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .healthGrid {
+        grid-template-columns: 1fr;
+    }
+}
