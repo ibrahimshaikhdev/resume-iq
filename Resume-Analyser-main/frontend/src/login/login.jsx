@@ -40,8 +40,8 @@ function Login() {
                 toast.warn("Invalid Email")
                 return;
             }
-            if (password.length < 6) {
-                toast.warn("Password must have at least 6 characters")
+            if (password.length < 6 || password.length > 20) {
+                toast.warn("Password must be between 6 and 20 characters")
                 return;
             }
             if (password !== confirmpassword) {
@@ -99,8 +99,8 @@ function Login() {
                 toast.warn("Invalid Email")
                 return;
             }
-            if (password.length < 6) {
-                toast.warn("Password must have at least 6 characters")
+            if (password.length < 6 || password.length > 20) {
+                toast.warn("Password must be between 6 and 20 characters")
                 return;
             }
 

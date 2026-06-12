@@ -24,8 +24,8 @@ public class AuthController {
         if (email == null || email.isBlank()) {
             return ResponseEntity.badRequest().body("Email is required");
         }
-        if (password == null || password.length() < 6) {
-            return ResponseEntity.badRequest().body("Password must be at least 6 characters");
+        if (password == null || password.length() < 6 || password.length() > 20) {
+            return ResponseEntity.badRequest().body("Password must be between 6 and 20 characters");
         }
         String username = email.split("@")[0];
         return ResponseEntity.ok(service.simpleRegister(email, password, username));
